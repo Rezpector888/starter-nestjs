@@ -16,8 +16,17 @@ export class UsersService {
       where: {
         email,
         deletedAt: null
+      },
+      select: {
+        id: true,
+        username: true,
+        email: true
       }
     })
+  }
+
+  async findOneForValidate(email: string) {
+    return await this.prismaService.user.findUnique({ where: { email }, select: { id: true, password: true } })
   }
 
   async create(createUserDto: CreateUserDto) {
