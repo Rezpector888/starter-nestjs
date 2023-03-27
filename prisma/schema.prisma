@@ -7,7 +7,8 @@ generator client {
 
 datasource db {
   provider     = "mysql"
-  url          = env("DATABASE_URL")
+  // url          = env("DATABASE_URL")
+  url          = "mysql://j5iklckwg98j4r87wsxl:pscale_pw_No6t8caeNuB7yM1tbsrN2SXVrObS60k9pjN7E0lW5Xb@ap-southeast.connect.psdb.cloud/belajar-planet-scale?sslaccept=strict"
   relationMode = "prisma"
 }
 
