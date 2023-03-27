@@ -4,6 +4,7 @@ import { PrismaModule } from 'nestjs-prisma';
 import config from './common/config/config';
 import { ConfigValidation } from './common/config/config-validate';
 import { AuthModule } from './modules/auth/auth.module';
+import { UsersModule } from './modules/users/users.module';
 
 @Module({
   imports: [
@@ -15,7 +16,8 @@ import { AuthModule } from './modules/auth/auth.module';
     }),
     PrismaModule.forRoot({
       isGlobal: true
-    })
+    }),
+    UsersModule
   ],
   controllers: [],
   providers: [],
